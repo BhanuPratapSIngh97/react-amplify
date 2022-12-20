@@ -1,16 +1,18 @@
 {
   "version": 1,
   "serviceConfiguration": {
-    "apiName": "reactamplify",
+    "apiName": "1visionfinal",
     "serviceName": "AppSync",
     "defaultAuthType": {
       "mode": "API_KEY",
-      "expirationTime": 7
+      "expirationTime": 15,
+      "apiKeyExpirationDate": "2023-01-04T15:58:46.946Z",
+      "keyDescription": ""
     },
     "additionalAuthTypes": [
       {
         "mode": "AMAZON_COGNITO_USER_POOLS",
-        "cognitoUserPoolId": "authreactamplifyd644ee2d"
+        "cognitoUserPoolId": "auth1visionfinal5cb80457"
       }
     ]
   }

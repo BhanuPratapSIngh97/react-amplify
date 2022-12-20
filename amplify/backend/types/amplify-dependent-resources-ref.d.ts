@@ -1,6 +1,21 @@
 export type AmplifyDependentResourcesAttributes = {
+    "api": {
+        "1visionfinal": {
+            "GraphQLAPIKeyOutput": "string",
+            "GraphQLAPIIdOutput": "string",
+            "GraphQLAPIEndpointOutput": "string"
+        }
+    },
+    "function": {
+        "userRegistration": {
+            "Name": "string",
+            "Arn": "string",
+            "Region": "string",
+            "LambdaExecutionRole": "string"
+        }
+    },
     "auth": {
-        "reactamplifyd644ee2d": {
+        "1visionfinal5cb80457": {
             "IdentityPoolId": "string",
             "IdentityPoolName": "string",
             "UserPoolId": "string",
@@ -8,13 +23,6 @@ export type AmplifyDependentResourcesAttributes = {
             "UserPoolName": "string",
             "AppClientIDWeb": "string",
             "AppClientID": "string"
-        }
-    },
-    "api": {
-        "reactamplify": {
-            "GraphQLAPIKeyOutput": "string",
-            "GraphQLAPIIdOutput": "string",
-            "GraphQLAPIEndpointOutput": "string"
         }
     }
 }

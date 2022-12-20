@@ -1,6 +1,55 @@
 {
+  "api": {
+    "1visionfinal": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "1visionfinal5cb80457",
+          "attributes": [
+            "UserPoolId"
+          ]
+        }
+      ],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 15,
+              "apiKeyExpirationDate": "2023-01-04T15:58:46.946Z",
+              "description": ""
+            }
+          },
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "auth1visionfinal5cb80457"
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "function": {
+    "userRegistration": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "type": "cicd",
+      "lastPushTimeStamp": "2022-12-20T16:07:43.820Z"
+    }
+  },
   "auth": {
-    "reactamplifyd644ee2d": {
+    "1visionfinal5cb80457": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
@@ -22,39 +71,6 @@
         "verificationMechanisms": [
           "EMAIL"
         ]
-      }
-    }
-  },
-  "api": {
-    "reactamplify": {
-      "service": "AppSync",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "auth",
-          "resourceName": "reactamplifyd644ee2d",
-          "attributes": [
-            "UserPoolId"
-          ]
-        }
-      ],
-      "output": {
-        "authConfig": {
-          "defaultAuthentication": {
-            "authenticationType": "API_KEY",
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
-            }
-          },
-          "additionalAuthenticationProviders": [
-            {
-              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
-              "userPoolConfig": {
-                "userPoolId": "authreactamplifyd644ee2d"
-              }
-            }
-          ]
-        }
       }
     }
   }
